@@ -1,0 +1,21 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+html,
+body {
+  font-family: 'Inter', sans-serif;
+  height: 100%;
+}

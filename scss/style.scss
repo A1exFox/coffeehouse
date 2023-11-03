@@ -1,0 +1,8 @@
+@import 'normalize';
+@import 'general';
+@import './design/typography';
+@import './design/colors';
+
+.test {
+  @extend %heading-2accent;
+}
