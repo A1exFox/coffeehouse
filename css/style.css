@@ -489,8 +489,8 @@ body {
 
 .button-store {
   display: inline-block;
-  padding: 11px 19px;
-  min-width: 200px;
+  padding: 0.6875rem 1.1875rem;
+  min-width: 12.5rem;
   color: #403f3d;
   background-color: transparent;
   border: 1px solid #665f55;
@@ -500,13 +500,13 @@ body {
 .button-store__body {
   display: flex;
   align-items: center;
-  -moz-column-gap: 8px;
-       column-gap: 8px;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
 }
 .button-store__icon-container {
-  flex: 0 0 36px;
-  width: 36px;
-  height: 36px;
+  flex: 0 0 2.25rem;
+  width: 2.25rem;
+  height: 2.25rem;
 }
 .button-store__icon {
   fill: #403f3d;
@@ -517,7 +517,7 @@ body {
   display: block;
 }
 .button-store__content > *:not(:last-child) {
-  margin-bottom: 2px;
+  margin-bottom: 0.125rem;
 }
 .button-store:hover {
   background-color: #665f55;
@@ -532,17 +532,17 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 60px;
-  height: 60px;
+  width: 3.75rem;
+  height: 3.75rem;
   background-color: transparent;
-  border: 1px solid #665f55;
+  border: 0.0625rem solid #665f55;
   border-radius: 50%;
   cursor: pointer;
   transition: 0.2s;
 }
 .button-icon__icon-container {
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 .button-icon__icon {
   fill: #665f55;
@@ -571,4 +571,36 @@ body {
 }
 .button-icon_rotate180 .button-icon__icon-container {
   transform: rotate(180deg);
+}
+
+.button-icon-burger {
+  position: relative;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 0.0625rem solid #665f55;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.button-icon-burger::after, .button-icon-burger::before {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0.75rem;
+  right: 0.75rem;
+  height: 0.125rem;
+  background-color: #403f3d;
+  border-radius: 0.125rem;
+  transition: 0.2s;
+}
+.button-icon-burger::before {
+  bottom: 1rem;
+}
+.button-icon-burger::after {
+  top: 1rem;
+}
+.button-icon-burger._active::before {
+  transform: translateY(-0.25rem) rotate(-45deg);
+}
+.button-icon-burger._active::after {
+  transform: translateY(0.25rem) rotate(45deg);
 }/*# sourceMappingURL=style.css.map */

@@ -146,8 +146,8 @@
 
 .button-store {
   display: inline-block;
-  padding: 11px 19px;
-  min-width: 200px;
+  padding: rem(11) rem(19);
+  min-width: rem(200);
   color: $text-dark;
   background-color: transparent;
   border: 1px solid $border-dark;
@@ -157,12 +157,12 @@
   &__body {
     display: flex;
     align-items: center;
-    column-gap: 8px;
+    column-gap: rem(8);
   }
   &__icon-container {
-    flex: 0 0 36px;
-    width: 36px;
-    height: 36px;
+    flex: 0 0 rem(36);
+    width: rem(36);
+    height: rem(36);
   }
   &__icon {
     fill: $text-dark;
@@ -172,7 +172,7 @@
   &__content > * {
     display: block;
     &:not(:last-child) {
-      margin-bottom: 2px;
+      margin-bottom: rem(2);
     }
   }
   &__download-text {
@@ -195,17 +195,17 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 60px;
-  height: 60px;
+  width: rem(60);
+  height: rem(60);
   background-color: transparent;
-  border: 1px solid $border-dark;
+  border: rem(1) solid $border-dark;
   border-radius: 50%;
   cursor: pointer;
   transition: $transition0;
 
   &__icon-container {
-    width: 24px;
-    height: 24px;
+    width: rem(24);
+    height: rem(24);
   }
   &__icon {
     fill: $border-dark;
@@ -235,6 +235,43 @@
   &_rotate180 {
     .button-icon__icon-container {
       transform: rotate(180deg);
+    }
+  }
+}
+
+.button-icon-burger {
+  position: relative;
+  width: rem(44);
+  height: rem(44);
+  border: rem(1) solid $border-dark;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    left: rem(12);
+    right: rem(12);
+    height: rem(2);
+    background-color: $text-dark;
+    border-radius: rem(2);
+    transition: $transition0;
+  }
+  &::before {
+    bottom: rem(16);
+  }
+  &::after {
+    top: rem(16);
+  }
+
+  &._active {
+    &::before {
+      transform: translateY(rem(-4)) rotate(-45deg);
+    }
+    &::after {
+      transform: translateY(rem(4)) rotate(45deg);
     }
   }
 }
