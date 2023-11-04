@@ -371,6 +371,12 @@ body {
   width: 200px;
 }
 
+.footer__containter {
+  padding: 25px;
+  background-color: #665f55;
+  border-radius: 8px;
+}
+
 .menu-item {
   position: relative;
   display: inline-flex;
@@ -398,6 +404,12 @@ body {
 }
 .menu-item:hover::after {
   width: 100%;
+}
+.menu-item__contact .menu-item__text {
+  color: #e1d4c9;
+}
+.menu-item__contact::after {
+  background-color: #e1d4c9;
 }
 
 .tab-item {

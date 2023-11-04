@@ -14,6 +14,11 @@
 .button-container {
   width: 200px;
 }
+.footer__containter {
+  padding: 25px;
+  background-color: $background-container;
+  border-radius: 8px;
+}
 
 .menu-item {
   position: relative;
@@ -23,7 +28,6 @@
 
   &__text {
     @extend %linkbutton;
-    // line-height: 150%;
     color: $text-dark;
   }
   &__icon {
@@ -44,6 +48,14 @@
   &:hover::after {
     width: 100%;
   }
+  &__contact {
+    .menu-item__text {
+      color: $text-light;
+    }
+    &::after {
+      background-color: $text-light;
+    }
+  }
 }
 
 .tab-item {
@@ -53,7 +65,6 @@
   column-gap: rem(8);
   padding: rem(7) rem(15) rem(7) rem(7);
   @extend %linkbutton;
-  // line-height: 150%;
   color: $text-dark;
   border: rem(1) solid $border-light;
   border-radius: rem(50);
