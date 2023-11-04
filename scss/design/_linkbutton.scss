@@ -1,0 +1,287 @@
+// @import './typography';
+
+// add capitalize
+
+.styleguide {
+  max-width: rem(1260);
+  margin: 0 auto;
+  padding: rem(50) rem(100);
+  & > * {
+    margin-bottom: rem(10);
+  }
+}
+.button-container {
+  width: 200px;
+}
+.footer__containter {
+  padding: 25px;
+  background-color: $background-container;
+  border-radius: 8px;
+}
+
+.menu-item {
+  position: relative;
+  display: inline-flex;
+  column-gap: rem(8);
+  padding-bottom: rem(4);
+
+  &__text {
+    @extend %linkbutton;
+    color: $text-dark;
+  }
+  &__icon {
+    flex: 0 0 rem(20);
+    width: rem(20);
+    height: rem(20);
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: rem(2);
+    width: 0%;
+    background-color: $text-dark;
+    transition: $transition0;
+  }
+  &:hover::after {
+    width: 100%;
+  }
+  &__contact {
+    .menu-item__text {
+      color: $text-light;
+    }
+    &::after {
+      background-color: $text-light;
+    }
+  }
+}
+
+.tab-item {
+  vertical-align: top;
+  display: inline-flex;
+  align-items: center;
+  column-gap: rem(8);
+  padding: rem(7) rem(15) rem(7) rem(7);
+  @extend %linkbutton;
+  color: $text-dark;
+  border: rem(1) solid $border-light;
+  border-radius: rem(50);
+  background-color: transparent;
+  cursor: pointer;
+  transition: $transition0;
+
+  &__circle {
+    flex: 0 0 rem(30);
+    width: rem(30);
+    height: rem(30);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $border-light;
+    border-radius: 50%;
+  }
+  &__image {
+    width: rem(16);
+  }
+  &__label {
+  }
+  &__text {
+  }
+  &:disabled,
+  &:hover {
+    background-color: $background-container;
+    border-color: $background-container;
+    .tab-item__circle {
+      background-color: $background-body;
+    }
+    .tab-item__text {
+      color: $text-light;
+    }
+  }
+  &:disabled {
+    cursor: default;
+  }
+}
+
+.button-primary {
+  display: inline-flex;
+  justify-content: center;
+  min-width: rem(200);
+  padding: rem(20) 0;
+  background-color: $background-body;
+  border-radius: rem(100);
+
+  &:hover {
+    .button-primary__container {
+      width: rem(72);
+    }
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    column-gap: rem(8);
+    width: rem(44);
+    overflow: hidden;
+    transition: $transition0;
+  }
+  &__text {
+    @extend %linkbutton;
+    color: $text-dark;
+  }
+  &__icon {
+    flex: 0 0 rem(20);
+    width: rem(20);
+    height: rem(20);
+  }
+}
+
+.button-secondary {
+  width: 100%;
+  padding: rem(9);
+  @extend %linkbutton;
+  color: $text-dark;
+  text-align: center;
+  background-color: transparent;
+  border: rem(1) solid $border-dark;
+  border-radius: rem(100);
+  cursor: pointer;
+  transition: $transition0;
+  &:hover {
+    color: $text-light;
+    background-color: $background-container;
+    border-color: $background-container;
+  }
+}
+
+.button-store {
+  display: inline-block;
+  padding: rem(11) rem(19);
+  min-width: rem(200);
+  color: $text-dark;
+  background-color: transparent;
+  border: 1px solid $border-dark;
+  border-radius: rem(100);
+  transition: $transition0;
+
+  &__body {
+    display: flex;
+    align-items: center;
+    column-gap: rem(8);
+  }
+  &__icon-container {
+    flex: 0 0 rem(36);
+    width: rem(36);
+    height: rem(36);
+  }
+  &__icon {
+    fill: $text-dark;
+    width: 100%;
+    height: 100%;
+  }
+  &__content > * {
+    display: block;
+    &:not(:last-child) {
+      margin-bottom: rem(2);
+    }
+  }
+  &__download-text {
+    @extend %caption;
+  }
+  &__service-text {
+    @extend %linkbutton;
+  }
+  &:hover {
+    background-color: $background-container;
+    border-color: $background-container;
+    color: $text-light;
+    .button-store__icon {
+      fill: $text-light;
+    }
+  }
+}
+
+.button-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(60);
+  height: rem(60);
+  background-color: transparent;
+  border: rem(1) solid $border-dark;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: $transition0;
+
+  &__icon-container {
+    width: rem(24);
+    height: rem(24);
+  }
+  &__icon {
+    fill: $border-dark;
+    width: 100%;
+    height: 100%;
+  }
+  &:hover {
+    background-color: $background-container;
+    border-color: $background-container;
+    .button-icon__icon {
+      fill: $text-light;
+    }
+  }
+  &_light {
+    border-color: $border-light;
+    .button-icon__icon {
+      fill: $border-light;
+    }
+    &:hover {
+      background-color: $background-body;
+      border-color: $background-body;
+      .button-icon__icon {
+        fill: $text-dark;
+      }
+    }
+  }
+  &_rotate180 {
+    .button-icon__icon-container {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.button-icon-burger {
+  position: relative;
+  width: rem(44);
+  height: rem(44);
+  border: rem(1) solid $border-dark;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    left: rem(12);
+    right: rem(12);
+    height: rem(2);
+    background-color: $text-dark;
+    border-radius: rem(2);
+    transition: $transition0;
+  }
+  &::before {
+    bottom: rem(16);
+  }
+  &::after {
+    top: rem(16);
+  }
+
+  &._active {
+    &::before {
+      transform: translateY(rem(-4)) rotate(-45deg);
+    }
+    &::after {
+      transform: translateY(rem(4)) rotate(45deg);
+    }
+  }
+}
