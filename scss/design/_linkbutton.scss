@@ -190,3 +190,51 @@
     }
   }
 }
+
+.button-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border: 1px solid $border-dark;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: $transition0;
+
+  &__icon-container {
+    width: 24px;
+    height: 24px;
+  }
+  &__icon {
+    fill: $border-dark;
+    width: 100%;
+    height: 100%;
+  }
+  &:hover {
+    background-color: $background-container;
+    border-color: $background-container;
+    .button-icon__icon {
+      fill: $text-light;
+    }
+  }
+  &_light {
+    border-color: $border-light;
+    .button-icon__icon {
+      fill: $border-light;
+    }
+    &:hover {
+      background-color: $background-body;
+      border-color: $background-body;
+      .button-icon__icon {
+        fill: $text-dark;
+      }
+    }
+  }
+  &_rotate180 {
+    .button-icon__icon-container {
+      transform: rotate(180deg);
+    }
+  }
+}
