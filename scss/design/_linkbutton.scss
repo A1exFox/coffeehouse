@@ -1,0 +1,145 @@
+// @import './typography';
+@import './colors';
+
+// add capitalize
+
+.styleguide {
+  max-width: rem(1260);
+  margin: 0 auto;
+  padding: rem(50) rem(100);
+  & > * {
+    margin-bottom: rem(10);
+  }
+}
+.button-container {
+  width: 200px;
+}
+
+.menu-item {
+  position: relative;
+  display: inline-flex;
+  column-gap: rem(8);
+  padding-bottom: rem(4);
+
+  &__text {
+    @extend %linkbutton;
+    // line-height: 150%;
+    color: $text-dark;
+  }
+  &__icon {
+    flex: 0 0 rem(20);
+    width: rem(20);
+    height: rem(20);
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: rem(2);
+    width: 0%;
+    background-color: $text-dark;
+    transition: $transition0;
+  }
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+.tab-item {
+  vertical-align: top;
+  display: inline-flex;
+  align-items: center;
+  column-gap: rem(8);
+  padding: rem(7) rem(15) rem(7) rem(7);
+  @extend %linkbutton;
+  // line-height: 150%;
+  color: $text-dark;
+  border: rem(1) solid $border-light;
+  border-radius: rem(50);
+  background-color: transparent;
+  cursor: pointer;
+  transition: $transition0;
+
+  &__circle {
+    flex: 0 0 rem(30);
+    width: rem(30);
+    height: rem(30);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $border-light;
+    border-radius: 50%;
+  }
+  &__image {
+    width: rem(16);
+  }
+  &__label {
+  }
+  &__text {
+  }
+  &:disabled,
+  &:hover {
+    background-color: $background-container;
+    border-color: $background-container;
+    .tab-item__circle {
+      background-color: $background-body;
+    }
+    .tab-item__text {
+      color: $text-light;
+    }
+  }
+  &:disabled {
+    cursor: default;
+  }
+}
+
+.button-primary {
+  display: inline-flex;
+  justify-content: center;
+  min-width: rem(200);
+  padding: rem(20) 0;
+  background-color: $background-body;
+  border-radius: rem(100);
+
+  &:hover {
+    .button-primary__container {
+      width: rem(72);
+    }
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    column-gap: rem(8);
+    width: rem(44);
+    overflow: hidden;
+    transition: $transition0;
+  }
+  &__text {
+    @extend %linkbutton;
+    color: $text-dark;
+  }
+  &__icon {
+    flex: 0 0 rem(20);
+    width: rem(20);
+    height: rem(20);
+  }
+}
+
+.button-secondary {
+  width: 100%;
+  padding: rem(9);
+  @extend %linkbutton;
+  color: $text-dark;
+  text-align: center;
+  background-color: transparent;
+  border: rem(1) solid $border-dark;
+  border-radius: rem(100);
+  cursor: pointer;
+  transition: $transition0;
+  &:hover {
+    color: $text-light;
+    background-color: $background-container;
+    border-color: $background-container;
+  }
+}

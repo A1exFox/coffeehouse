@@ -1,7 +1,11 @@
+@use 'sass:math';
 @import 'normalize';
 @import 'general';
 @import './design/typography';
-@import './design/colors';
+// @import './design/colors';
+@import './functional/_extends';
+@import './functional/variables';
+@import './design/linkbutton';
 
 .test {
   @extend %heading-2accent;
