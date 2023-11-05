@@ -633,11 +633,14 @@ body {
   margin-top: 20px;
 }
 .header__container {
+  position: relative;
   display: flex;
   align-items: center;
 }
 .header__logo-container {
+  position: relative;
   flex: 0 0 100px;
+  z-index: 10;
 }
 .header__logo-image {
   width: 100%;
