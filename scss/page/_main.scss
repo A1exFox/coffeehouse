@@ -1,3 +1,7 @@
 .main {
-  // flex: 1;
+  &__enjoy {
+    margin-top: 20px;
+  }
 }
+
+@import './block/enjoy';
