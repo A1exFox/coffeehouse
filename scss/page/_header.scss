@@ -1,11 +1,17 @@
 .header {
-  margin-top: 20px;
+  margin-top: rem(20);
   &__container {
+    position: relative;
     display: flex;
     align-items: center;
+    @media (max-width: $tabwidthpx) {
+      justify-content: space-between;
+    }
   }
   &__logo-container {
-    flex: 0 0 100px;
+    flex: 0 0 rem(100);
+    position: relative;
+    z-index: $z-i-logo;
   }
   &__logo-image {
     width: 100%;
@@ -15,6 +21,29 @@
     flex: 1 1 auto;
     display: flex;
     align-items: center;
+    @media (max-width: $tabwidthpx) {
+      position: fixed;
+      display: block;
+      left: 100%;
+      top: rem(80);
+      bottom: 0;
+      width: 100%;
+      padding-bottom: rem(50);
+      background-color: $background-body;
+      overflow: auto;
+      transition: $transition0;
+      &::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        height: rem(80);
+        width: 100%;
+        background-color: $background-body;
+      }
+      &._active {
+        left: 0%;
+      }
+    }
   }
   &__menu-left {
     flex: 1 1 auto;
@@ -25,21 +54,69 @@
   &__menu-list {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 40px;
-    padding: 0 10px;
+    column-gap: rem(40);
+    padding: 0 rem(10);
+    @media (max-width: $tabwidthpx) {
+      display: block;
+      text-align: center;
+      padding-top: rem(81);
+    }
   }
   &__menu-item {
+    @media (max-width: $tabwidthpx) {
+      &:not(:last-child) {
+        margin-bottom: rem(56);
+      }
+    }
   }
   &__menu-left-link {
     @extend %linkbutton;
     color: $text-dark;
+    @media (max-width: $tabwidthpx) {
+      font-size: rem(32);
+      font-weight: 600;
+      line-height: 125%;
+    }
   }
   &__menu-right {
     flex: 0 1 auto;
+    @media (max-width: $tabwidthpx) {
+      text-align: center;
+      padding-top: rem(96);
+    }
   }
   &__menu-right-link {
+    @media (max-width: $tabwidthpx) {
+      column-gap: rem(16);
+    }
+  }
+  &__menu-right-link-text {
+    @media (max-width: $tabwidthpx) {
+      font-size: rem(32);
+      font-weight: 600;
+      line-height: 125%;
+    }
+  }
+  &__menu-right-link-icon-small {
+    display: block;
+    @media (max-width: $tabwidthpx) {
+      display: none;
+    }
+  }
+  &__menu-right-link-icon-middle {
+    display: none;
+    @media (max-width: $tabwidthpx) {
+      display: block;
+      width: rem(40);
+      height: rem(40);
+    }
   }
   &__burger-container {
     display: none;
+    position: relative;
+    z-index: $z-i-burger;
+    @media (max-width: $tabwidthpx) {
+      display: block;
+    }
   }
 }

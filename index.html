@@ -15,10 +15,10 @@
   <div class="wrapper">
     <header class="header">
       <div class="header__container _container">
-        <div class="header__logo-container">
+        <a href="#" class="header__logo-container">
           <img class="header__logo-image" src="./icons/logo.svg" alt="logo">
-        </div>
-        <nav class="header__menu-container">
+        </a>
+        <nav class="header__menu-container" id="menulist">
           <div class="header__menu-left">
             <ul class="header__menu-list">
               <li class="header__menu-item">
@@ -37,17 +37,19 @@
           </div>
           <div class="header__menu-right">
             <a href="#" class="header__menu-right-link menu-item">
-              <span class="menu-item__text">Menu</span>
-              <img class="menu-item__icon" src="./icons/coffee-cup.svg" alt="cup">
+              <span class="header__menu-right-link-text menu-item__text">Menu</span>
+              <img class="header__menu-right-link-icon-small menu-item__icon" src="./icons/coffee-cup.svg" alt="cup">
+              <img class="header__menu-right-link-icon-middle menu-item__icon" src="./icons/coffee-cup-middle.svg" alt="cup">
             </a>
           </div>
         </nav>
         <div class="header__burger-container">
-          <button class="button-icon-burger"></button>
+          <button class="button-icon-burger" id="burgerbutton"></button>
         </div>
       </div>
     </header>
-    <main class="main">main</main>
+    <main class="main">main
+    </main>
     <footer class="footer">footer</footer>
   </div>
   <script type="module" src="./js/index.js"></script>

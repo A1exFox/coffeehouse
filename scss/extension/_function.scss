@@ -1,8 +1,7 @@
 @function rem($px) {
-  @return math.div($px, 16) + rem;
+  @return math.div($px, 16)+rem;
 }
-@mixin responsive(
-  $property: '',
+@mixin responsive($property: '',
   $size1: 0,
   $size2: 0,
   $width1: 0,
@@ -17,7 +16,7 @@
 
   $diffSize: math.abs($size1 - $size2);
   $diffWidth: math.abs($width1 - $width2);
-  @if ($diffSize > 0 and $diffWidth > 0 and $property != '') {
+  @if ($diffSize > 0 and $diffWidth > 0 and $property !='') {
     $minSize: math.min($size1, $size2);
     $maxSize: math.max($size1, $size2);
     $minWidth: math.min($width1, $width2);
@@ -26,44 +25,45 @@
     // The best solution of responsive property:
     // https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
     $slope: math.div($diffSize, $diffWidth);
-    $intersect: (-$minWidth) * $slope + $minSize;
-    $prefferedValue: #{toRem($intersect)}' + ' #{$slope * 100}vw;
+    $intersect: (
+      -$minWidth) * $slope + $minSize;
+    $prefferedValue: #{rem($intersect)}' + '#{$slope * 100}vw;
 
     $clampValue: #{'clamp('
-      toRem($minSize)
-      ','
-      $prefferedValue
-      ','
-      toRem($maxSize)
-      ')'};
-    $calcValue: #{'calc(' $prefferedValue ')'};
-    // if [@supports] is not supports in browser;
-    #{$property}: toRem($minSize);
+ rem($minSize) ','
+      $prefferedValue ','
+      rem($maxSize) ')'
+  }
+  ;
+  $calcValue: #{'calc(' $prefferedValue ')'};
+  // if [@supports] is not supports in browser;
+  #{$property}: rem($minSize
+);
 
-    // if [clamp()] is support
-    @supports (#{$property}: $clampValue) {
-      #{$property}: $clampValue;
-    }
-    // if [clamp()] is not support
-    @supports not (#{$property}: $clampValue) {
-      // if [calc()] is support
-      @supports (#{$property}: $calcValue) {
-        #{$property}: $calcValue;
-        @if ($mode == '>' or $mode == '<>') {
-          @media (min-width: #{$maxWidth}px) {
-            #{$property}: toRem($maxSize);
-          }
-        }
-        @if ($mode == '<' or $mode == '<>') {
-          @media (max-width: #{$minWidth}px) {
-            #{$property}: toRem($minSize);
-          }
-        }
+// if [clamp()] is support
+@supports (#{$property}: $clampValue) {
+  #{$property}: $clampValue;
+}
+// if [clamp()] is not support
+@supports not (#{$property}: $clampValue) {
+  // if [calc()] is support
+  @supports (#{$property}: $calcValue) {
+    #{$property}: $calcValue;
+    @if ($mode =='>' or $mode =='<>') {
+      @media (min-width: #{$maxWidth}px) {
+        #{$property}: rem($maxSize);
       }
-      // if [calc()] is not support
-      @supports not (#{$property}: $calcValue) {
-        #{$property}: toRem($minSize);
+    }
+    @if ($mode =='<' or $mode =='<>') {
+      @media (max-width: #{$minWidth}px) {
+        #{$property}: rem($minSize);
       }
     }
   }
+  // if [calc()] is not support
+  @supports not (#{$property}: $calcValue) {
+    #{$property}: rem($minSize);
+  }
+}
+}
 }

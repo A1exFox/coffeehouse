@@ -1,10 +1,9 @@
 @use 'sass:math';
 @import './general/normalize';
 @import './general/reset';
-@import './design/typography';
-@import './design/colors';
-@import './extension/function';
 @import './extension/variables';
+@import './design/typography';
+@import './extension/function';
 @import './design/linkbutton';
 
 @import './page/base';

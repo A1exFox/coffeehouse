@@ -1,10 +1,17 @@
+body._lock {
+  @media (max-width: $tabwidthpx) {
+    overflow: hidden;
+  }
+}
+
+
 .wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100%;
   font-family: 'Inter', sans-serif;
   overflow: hidden;
-  & > .main {
+  &>.main {
     flex: 1;
   }
 }
@@ -13,4 +20,6 @@
   max-width: rem(1440);
   padding: 0 40px;
   margin: 0 auto;
+  @include responsive("padding-left", 40, 16, $tabwidth, $mobwidthM);
+  @include responsive("padding-right", 40, 16, $tabwidth, $mobwidthM);
 }
