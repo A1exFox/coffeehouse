@@ -1,5 +1,7 @@
 .main {
-  &__enjoy {}
+  &__enjoy {
+    margin-top: 20px;
+  }
 }
 
 @import './block/enjoy';

@@ -1,3 +1,55 @@
 .enjoy {
-  text-decoration: underline;
+  &__container {}
+  &__body {
+    position: relative;
+    padding: 100px;
+    border-radius: 40px;
+    overflow: hidden;
+    @include responsive('padding-left', 100, 60, $laptopwidth, $tabwidth);
+    @include responsive('padding-right', 100, 60, $laptopwidth, $tabwidth);
+    @media (max-width: $tabwidthpx) {
+      @include responsive('padding-top', 100, 60, $tabwidth, $mobwidthM);
+      @include responsive('padding-bottom', 100, 60, $tabwidth, $mobwidthM);
+      @include responsive('padding-left', 60, 16, $tabwidth, $mobwidthM);
+      @include responsive('padding-right', 60, 16, $tabwidth, $mobwidthM);
+
+    }
+  }
+  &__content {
+    position: relative;
+    z-index: 10;
+    max-width: 530px;
+    &>*:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+  &__title {
+    @extend %heading-1;
+    @include responsive('font-size', 72, 42, $tabwidth, $mobwidthM);
+    @include responsive('line-height', 75.6, 48.3, $tabwidth, $mobwidthM);
+    color: $text-light;
+  }
+  &__title-italic {
+    @extend %heading-1accent;
+    color: $text-accent;
+  }
+  &__description {
+    @extend %medium;
+    color: $text-light;
+  }
+  &__button {}
+  &__button-container {
+    @media (max-width: $tabwidthpx) {
+      width: rem(72);
+    }
+  }
+
+  &__background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
