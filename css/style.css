@@ -658,53 +658,9 @@ body {
     padding-left: clamp( 1rem , -0.4690721649rem  +  6.1855670103vw , 2.5rem );
   }
 }
-@supports not (padding-left: clamp( 1rem , -0.4690721649rem  +  6.1855670103vw , 2.5rem )) {
-  @supports (padding-left: calc( -0.4690721649rem  +  6.1855670103vw )) {
-    ._container {
-      padding-left: calc( -0.4690721649rem  +  6.1855670103vw );
-    }
-    @media (min-width: 768px) {
-      ._container {
-        padding-left: 2.5rem;
-      }
-    }
-    @media (max-width: 380px) {
-      ._container {
-        padding-left: 1rem;
-      }
-    }
-  }
-  @supports not (padding-left: calc( -0.4690721649rem  +  6.1855670103vw )) {
-    ._container {
-      padding-left: 1rem;
-    }
-  }
-}
 @supports (padding-right: clamp( 1rem , -0.4690721649rem  +  6.1855670103vw , 2.5rem )) {
   ._container {
     padding-right: clamp( 1rem , -0.4690721649rem  +  6.1855670103vw , 2.5rem );
-  }
-}
-@supports not (padding-right: clamp( 1rem , -0.4690721649rem  +  6.1855670103vw , 2.5rem )) {
-  @supports (padding-right: calc( -0.4690721649rem  +  6.1855670103vw )) {
-    ._container {
-      padding-right: calc( -0.4690721649rem  +  6.1855670103vw );
-    }
-    @media (min-width: 768px) {
-      ._container {
-        padding-right: 2.5rem;
-      }
-    }
-    @media (max-width: 380px) {
-      ._container {
-        padding-right: 1rem;
-      }
-    }
-  }
-  @supports not (padding-right: calc( -0.4690721649rem  +  6.1855670103vw )) {
-    ._container {
-      padding-right: 1rem;
-    }
   }
 }
 
@@ -863,53 +819,9 @@ body {
     padding-left: clamp( 3.75rem , 0.8928571429rem  +  5.9523809524vw , 6.25rem );
   }
 }
-@supports not (padding-left: clamp( 3.75rem , 0.8928571429rem  +  5.9523809524vw , 6.25rem )) {
-  @supports (padding-left: calc( 0.8928571429rem  +  5.9523809524vw )) {
-    .enjoy__body {
-      padding-left: calc( 0.8928571429rem  +  5.9523809524vw );
-    }
-    @media (min-width: 1440px) {
-      .enjoy__body {
-        padding-left: 6.25rem;
-      }
-    }
-    @media (max-width: 768px) {
-      .enjoy__body {
-        padding-left: 3.75rem;
-      }
-    }
-  }
-  @supports not (padding-left: calc( 0.8928571429rem  +  5.9523809524vw )) {
-    .enjoy__body {
-      padding-left: 3.75rem;
-    }
-  }
-}
 @supports (padding-right: clamp( 3.75rem , 0.8928571429rem  +  5.9523809524vw , 6.25rem )) {
   .enjoy__body {
     padding-right: clamp( 3.75rem , 0.8928571429rem  +  5.9523809524vw , 6.25rem );
-  }
-}
-@supports not (padding-right: clamp( 3.75rem , 0.8928571429rem  +  5.9523809524vw , 6.25rem )) {
-  @supports (padding-right: calc( 0.8928571429rem  +  5.9523809524vw )) {
-    .enjoy__body {
-      padding-right: calc( 0.8928571429rem  +  5.9523809524vw );
-    }
-    @media (min-width: 1440px) {
-      .enjoy__body {
-        padding-right: 6.25rem;
-      }
-    }
-    @media (max-width: 768px) {
-      .enjoy__body {
-        padding-right: 3.75rem;
-      }
-    }
-  }
-  @supports not (padding-right: calc( 0.8928571429rem  +  5.9523809524vw )) {
-    .enjoy__body {
-      padding-right: 3.75rem;
-    }
   }
 }
 @media (max-width: 768px) {
@@ -924,53 +836,9 @@ body {
       padding-top: clamp( 3.75rem , 1.3015463918rem  +  10.3092783505vw , 6.25rem );
     }
   }
-  @supports not (padding-top: clamp( 3.75rem , 1.3015463918rem  +  10.3092783505vw , 6.25rem )) {
-    @supports (padding-top: calc( 1.3015463918rem  +  10.3092783505vw )) {
-      .enjoy__body {
-        padding-top: calc( 1.3015463918rem  +  10.3092783505vw );
-      }
-      @media (max-width: 768px) and (min-width: 768px) {
-        .enjoy__body {
-          padding-top: 6.25rem;
-        }
-      }
-      @media (max-width: 768px) and (max-width: 380px) {
-        .enjoy__body {
-          padding-top: 3.75rem;
-        }
-      }
-    }
-    @supports not (padding-top: calc( 1.3015463918rem  +  10.3092783505vw )) {
-      .enjoy__body {
-        padding-top: 3.75rem;
-      }
-    }
-  }
   @supports (padding-bottom: clamp( 3.75rem , 1.3015463918rem  +  10.3092783505vw , 6.25rem )) {
     .enjoy__body {
       padding-bottom: clamp( 3.75rem , 1.3015463918rem  +  10.3092783505vw , 6.25rem );
-    }
-  }
-  @supports not (padding-bottom: clamp( 3.75rem , 1.3015463918rem  +  10.3092783505vw , 6.25rem )) {
-    @supports (padding-bottom: calc( 1.3015463918rem  +  10.3092783505vw )) {
-      .enjoy__body {
-        padding-bottom: calc( 1.3015463918rem  +  10.3092783505vw );
-      }
-      @media (max-width: 768px) and (min-width: 768px) {
-        .enjoy__body {
-          padding-bottom: 6.25rem;
-        }
-      }
-      @media (max-width: 768px) and (max-width: 380px) {
-        .enjoy__body {
-          padding-bottom: 3.75rem;
-        }
-      }
-    }
-    @supports not (padding-bottom: calc( 1.3015463918rem  +  10.3092783505vw )) {
-      .enjoy__body {
-        padding-bottom: 3.75rem;
-      }
     }
   }
   @supports (padding-left: clamp( 1rem , -1.6932989691rem  +  11.3402061856vw , 3.75rem )) {
@@ -978,53 +846,9 @@ body {
       padding-left: clamp( 1rem , -1.6932989691rem  +  11.3402061856vw , 3.75rem );
     }
   }
-  @supports not (padding-left: clamp( 1rem , -1.6932989691rem  +  11.3402061856vw , 3.75rem )) {
-    @supports (padding-left: calc( -1.6932989691rem  +  11.3402061856vw )) {
-      .enjoy__body {
-        padding-left: calc( -1.6932989691rem  +  11.3402061856vw );
-      }
-      @media (max-width: 768px) and (min-width: 768px) {
-        .enjoy__body {
-          padding-left: 3.75rem;
-        }
-      }
-      @media (max-width: 768px) and (max-width: 380px) {
-        .enjoy__body {
-          padding-left: 1rem;
-        }
-      }
-    }
-    @supports not (padding-left: calc( -1.6932989691rem  +  11.3402061856vw )) {
-      .enjoy__body {
-        padding-left: 1rem;
-      }
-    }
-  }
   @supports (padding-right: clamp( 1rem , -1.6932989691rem  +  11.3402061856vw , 3.75rem )) {
     .enjoy__body {
       padding-right: clamp( 1rem , -1.6932989691rem  +  11.3402061856vw , 3.75rem );
-    }
-  }
-  @supports not (padding-right: clamp( 1rem , -1.6932989691rem  +  11.3402061856vw , 3.75rem )) {
-    @supports (padding-right: calc( -1.6932989691rem  +  11.3402061856vw )) {
-      .enjoy__body {
-        padding-right: calc( -1.6932989691rem  +  11.3402061856vw );
-      }
-      @media (max-width: 768px) and (min-width: 768px) {
-        .enjoy__body {
-          padding-right: 3.75rem;
-        }
-      }
-      @media (max-width: 768px) and (max-width: 380px) {
-        .enjoy__body {
-          padding-right: 1rem;
-        }
-      }
-    }
-    @supports not (padding-right: calc( -1.6932989691rem  +  11.3402061856vw )) {
-      .enjoy__body {
-        padding-right: 1rem;
-      }
     }
   }
 }
@@ -1046,53 +870,9 @@ body {
     font-size: clamp( 2.625rem , 0.7886597938rem  +  7.7319587629vw , 4.5rem );
   }
 }
-@supports not (font-size: clamp( 2.625rem , 0.7886597938rem  +  7.7319587629vw , 4.5rem )) {
-  @supports (font-size: calc( 0.7886597938rem  +  7.7319587629vw )) {
-    .enjoy__title {
-      font-size: calc( 0.7886597938rem  +  7.7319587629vw );
-    }
-    @media (min-width: 768px) {
-      .enjoy__title {
-        font-size: 4.5rem;
-      }
-    }
-    @media (max-width: 380px) {
-      .enjoy__title {
-        font-size: 2.625rem;
-      }
-    }
-  }
-  @supports not (font-size: calc( 0.7886597938rem  +  7.7319587629vw )) {
-    .enjoy__title {
-      font-size: 2.625rem;
-    }
-  }
-}
 @supports (line-height: clamp( 3.01875rem , 1.3476804124rem  +  7.0360824742vw , 4.725rem )) {
   .enjoy__title {
     line-height: clamp( 3.01875rem , 1.3476804124rem  +  7.0360824742vw , 4.725rem );
-  }
-}
-@supports not (line-height: clamp( 3.01875rem , 1.3476804124rem  +  7.0360824742vw , 4.725rem )) {
-  @supports (line-height: calc( 1.3476804124rem  +  7.0360824742vw )) {
-    .enjoy__title {
-      line-height: calc( 1.3476804124rem  +  7.0360824742vw );
-    }
-    @media (min-width: 768px) {
-      .enjoy__title {
-        line-height: 4.725rem;
-      }
-    }
-    @media (max-width: 380px) {
-      .enjoy__title {
-        line-height: 3.01875rem;
-      }
-    }
-  }
-  @supports not (line-height: calc( 1.3476804124rem  +  7.0360824742vw )) {
-    .enjoy__title {
-      line-height: 3.01875rem;
-    }
   }
 }
 .enjoy__title-italic {

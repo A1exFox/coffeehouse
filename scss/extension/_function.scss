@@ -44,26 +44,5 @@
 @supports (#{$property}: $clampValue) {
   #{$property}: $clampValue;
 }
-// if [clamp()] is not support
-@supports not (#{$property}: $clampValue) {
-  // if [calc()] is support
-  @supports (#{$property}: $calcValue) {
-    #{$property}: $calcValue;
-    @if ($mode =='>' or $mode =='<>') {
-      @media (min-width: #{$maxWidth}px) {
-        #{$property}: rem($maxSize);
-      }
-    }
-    @if ($mode =='<' or $mode =='<>') {
-      @media (max-width: #{$minWidth}px) {
-        #{$property}: rem($minSize);
-      }
-    }
-  }
-  // if [calc()] is not support
-  @supports not (#{$property}: $calcValue) {
-    #{$property}: rem($minSize);
-  }
-}
 }
 }
