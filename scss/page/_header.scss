@@ -1,0 +1,45 @@
+.header {
+  margin-top: 20px;
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+  &__logo-container {
+    flex: 0 0 100px;
+  }
+  &__logo-image {
+    width: 100%;
+    height: 100%;
+  }
+  &__menu-container {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+  }
+  &__menu-left {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    padding: 0 10px;
+  }
+  &__menu-item {
+  }
+  &__menu-left-link {
+    @extend %linkbutton;
+    color: $text-dark;
+  }
+  &__menu-right {
+    flex: 0 1 auto;
+  }
+  &__menu-right-link {
+  }
+  &__burger-container {
+    display: none;
+  }
+}

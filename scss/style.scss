@@ -1,8 +1,13 @@
 @use 'sass:math';
-@import 'normalize';
-@import 'general';
+@import './general/normalize';
+@import './general/reset';
 @import './design/typography';
 @import './design/colors';
-@import './functional/_extends';
-@import './functional/variables';
+@import './extension/function';
+@import './extension/variables';
 @import './design/linkbutton';
+
+@import './page/base';
+@import './page/header';
+@import './page/main';
+@import './page/footer';

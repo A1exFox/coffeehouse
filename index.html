@@ -1,19 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/style.css" />
-    <title>Coffee House</title>
-  </head>
-  <body>
-    <h1 class="test">Content</h1>
-    <script type="module" src="./js/index.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Coffee House</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container _container">
+        <div class="header__logo-container">
+          <img class="header__logo-image" src="./icons/logo.svg" alt="logo">
+        </div>
+        <nav class="header__menu-container">
+          <div class="header__menu-left">
+            <ul class="header__menu-list">
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-left-link menu-item">Favorite coffee</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-left-link menu-item">About</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-left-link menu-item">Mobile app</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-left-link menu-item">Contacts</a>
+              </li>
+            </ul>
+          </div>
+          <div class="header__menu-right">
+            <a href="#" class="header__menu-right-link menu-item">
+              <span class="menu-item__text">Menu</span>
+              <img class="menu-item__icon" src="./icons/coffee-cup.svg" alt="cup">
+            </a>
+          </div>
+        </nav>
+        <div class="header__burger-container">
+          <button class="button-icon-burger"></button>
+        </div>
+      </div>
+    </header>
+    <main class="main">main</main>
+    <footer class="footer">footer</footer>
+  </div>
+  <script type="module" src="./js/index.js"></script>
+</body>
+
 </html>
