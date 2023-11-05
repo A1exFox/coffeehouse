@@ -828,4 +828,8 @@ body {
   .header__burger-container {
     display: block;
   }
+}
+
+.enjoy {
+  text-decoration: underline;
 }/*# sourceMappingURL=style.css.map */
