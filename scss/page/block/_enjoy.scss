@@ -29,10 +29,6 @@
     @include responsive('line-height', 75.6, 48.3, $tabwidth, $mobwidthM);
     color: $text-light;
   }
-  &__title-italic {
-    @extend %heading-1accent;
-    color: $text-accent;
-  }
   &__description {
     @extend %medium;
     color: $text-light;

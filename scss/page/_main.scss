@@ -2,6 +2,10 @@
   &__enjoy {
     margin-top: 20px;
   }
+  &__favourite {
+    margin-top: 100px;
+  }
 }
 
 @import './block/enjoy';
+@import './block/favourite';

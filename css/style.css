@@ -347,11 +347,23 @@ body {
   line-height: 105%;
 }
 
-.enjoy__title-italic {
+._title-italic {
   font-style: italic;
 }
 
-.enjoy__description {
+._titleBlock {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+.slide__price, .slide__name {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+.slide__description, .enjoy__description {
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
@@ -664,6 +676,10 @@ body {
   }
 }
 
+._title-italic {
+  color: #b0907a;
+}
+
 .header {
   margin-top: 1.25rem;
 }
@@ -805,6 +821,9 @@ body {
 .main__enjoy {
   margin-top: 20px;
 }
+.main__favourite {
+  margin-top: 100px;
+}
 
 .enjoy__body {
   position: relative;
@@ -875,9 +894,6 @@ body {
     line-height: clamp( 3.01875rem , 1.3476804124rem  +  7.0360824742vw , 4.725rem );
   }
 }
-.enjoy__title-italic {
-  color: #b0907a;
-}
 .enjoy__description {
   color: #e1d4c9;
 }
@@ -894,4 +910,83 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.favourite__title {
+  text-align: center;
+}
+.favourite__slider {
+  margin-top: 40px;
+}
+
+.slider {
+  position: relative;
+}
+.slider__frame {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.slider__list {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin-left: -100%;
+}
+.slider__item {
+  flex: 0 0 100%;
+}
+.slider__timers {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+  margin-top: 40px;
+}
+.slider__timer {
+  width: 40px;
+  height: 4px;
+  border-radius: 100px;
+  background-color: #c1b6ad;
+  overflow: hidden;
+}
+.slider__timer::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 50%;
+  background-color: #665f55;
+}
+.slider__buttons {
+  position: absolute;
+  left: 4px;
+  right: 4px;
+  top: 42.7%;
+  display: flex;
+  justify-content: space-between;
+}
+.slide__body {
+  max-width: 480px;
+  margin: 0 auto;
+}
+.slide__image {
+  width: 100%;
+  height: 100%;
+}
+.slide__name {
+  margin-top: 20px;
+  color: #403f3d;
+  text-align: center;
+}
+.slide__description {
+  margin-top: 16px;
+  color: #403f3d;
+  text-align: center;
+}
+.slide__price {
+  margin-top: 16px;
+  color: #403f3d;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

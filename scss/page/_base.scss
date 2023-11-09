@@ -3,8 +3,6 @@ body._lock {
     overflow: hidden;
   }
 }
-
-
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -15,11 +13,19 @@ body._lock {
     flex: 1;
   }
 }
-
 ._container {
   max-width: rem(1440);
   padding: 0 40px;
   margin: 0 auto;
   @include responsive("padding-left", 40, 16, $tabwidth, $mobwidthM);
   @include responsive("padding-right", 40, 16, $tabwidth, $mobwidthM);
+}
+
+._title-italic {
+  @extend %heading-1accent;
+  color: $text-accent;
+}
+
+._titleBlock {
+  @extend %heading-2;
 }
