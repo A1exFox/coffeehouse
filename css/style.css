@@ -696,7 +696,7 @@ body {
 .header__logo-container {
   flex: 0 0 6.25rem;
   position: relative;
-  z-index: 1;
+  z-index: 4;
 }
 .header__logo-image {
   width: 100%;
@@ -716,6 +716,7 @@ body {
     bottom: 0;
     width: 100%;
     padding-bottom: 3.125rem;
+    z-index: 3;
     background-color: #e1d4c9;
     overflow: auto;
     transition: 0.3s;
@@ -810,7 +811,7 @@ body {
 .header__burger-container {
   display: none;
   position: relative;
-  z-index: 1;
+  z-index: 4;
 }
 @media (max-width: 768px) {
   .header__burger-container {
@@ -873,7 +874,7 @@ body {
 }
 .enjoy__content {
   position: relative;
-  z-index: 10;
+  z-index: 2;
   max-width: 530px;
 }
 .enjoy__content > *:not(:last-child) {
@@ -910,6 +911,7 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  z-index: 1;
 }
 
 .favourite__title {
