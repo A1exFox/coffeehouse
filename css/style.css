@@ -355,6 +355,12 @@ body {
   font-size: 60px;
   font-weight: 600;
   line-height: 125%;
+  font-size: 2rem;
+}
+@supports (font-size: clamp( 2rem , 0.2860824742rem  +  7.2164948454vw , 3.75rem )) {
+  ._titleBlock {
+    font-size: clamp( 2rem , 0.2860824742rem  +  7.2164948454vw , 3.75rem );
+  }
 }
 
 .slide__price, .slide__name {
@@ -928,8 +934,14 @@ body {
   position: relative;
   z-index: 1;
   max-width: 560px;
+  max-width: 21.75rem;
   margin: 0 auto;
   overflow: hidden;
+}
+@supports (max-width: clamp( 21.75rem , 5.332361516rem  +  61.8075801749vw , 35rem )) {
+  .slider__frame {
+    max-width: clamp( 21.75rem , 5.332361516rem  +  61.8075801749vw , 35rem );
+  }
 }
 .slider__list {
   display: flex;
@@ -961,14 +973,37 @@ body {
   width: 50%;
   background-color: #665f55;
 }
-.slider__buttons {
-  position: absolute;
-  left: 4px;
-  right: 4px;
-  top: 42.7%;
-  display: flex;
-  justify-content: space-between;
+@media (max-width: 425px) {
+  .slider__buttons {
+    visibility: hidden;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
 }
+.slider__button {
+  position: absolute;
+  top: 42.7%;
+  z-index: 1;
+}
+.slider__button:first-child {
+  left: 4px;
+}
+@media (max-width: 768px) {
+  .slider__button:first-child {
+    left: 0;
+  }
+}
+.slider__button:last-child {
+  right: 4px;
+}
+@media (max-width: 768px) {
+  .slider__button:last-child {
+    right: 0;
+  }
+}
+
 .slide__body {
   max-width: 480px;
   margin: 0 auto;

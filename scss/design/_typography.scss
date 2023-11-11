@@ -11,6 +11,7 @@
   font-size: 60px;
   font-weight: 600;
   line-height: 125%;
+  @include responsive('font-size', 60, 32, $tabwidth, $mobwidthM)
 }
 %heading-2accent {
   font-style: italic;

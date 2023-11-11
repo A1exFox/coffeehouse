@@ -13,6 +13,7 @@
     position: relative;
     z-index: $z-i-slider;
     max-width: 560px;
+    @include responsive('max-width', 560, 348, $tabwidth, $mobwidthL);
     margin: 0 auto;
     overflow: hidden;
   }
@@ -46,14 +47,32 @@
     }
   }
   &__buttons {
-    position: absolute;
-    left: 4px;
-    right: 4px;
-    top: 42.7%;
-    display: flex;
-    justify-content: space-between;
+    @media (max-width: $mobwidthLpx) {
+      visibility: hidden;
+      opacity: 0;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+    }
   }
-  &__button {}
+  &__button {
+    position: absolute;
+    top: 42.7%;
+    z-index: $z-i-slider-button;
+
+    &:first-child {
+      left: 4px;
+      @media (max-width: $tabwidthpx) {
+        left: 0;
+      }
+    }
+    &:last-child {
+      right: 4px;
+      @media (max-width: $tabwidthpx) {
+        right: 0;
+      }
+    }
+  }
 }
 .slide {
   &__body {

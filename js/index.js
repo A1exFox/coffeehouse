@@ -18,7 +18,7 @@ const prevslide = document.getElementById('slider-prev');
 const nextslide = document.getElementById('slider-next');
 const sliderset = {
   dataurl: './assets/slides.json',
-  container: {
+  containers: {
     slider: document.getElementById('slider-slides-container'),
     timer: document.getElementById('slider-timers-container'),
   },

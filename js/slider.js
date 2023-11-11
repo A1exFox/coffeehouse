@@ -1,10 +1,11 @@
+import { Slider } from "./slider/Slider.js";
 let slider = null;
 export async function init(set) {
   try {
     const sliderData = await loaddata(set.dataurl);
     if (!sliderData) throw new Error(`Load from '${url}' is failed`);
-    // slider = new Slider(sliderData, sliderContainer);
-    slider = sliderData;
+    slider = new Slider(sliderData, set.containers);
+    // slider = sliderData;
   }
   catch (error) {
     console.error(error);

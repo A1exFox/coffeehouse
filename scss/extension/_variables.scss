@@ -2,8 +2,10 @@ $transition0: 0.3s;
 $laptopwidth: 1440;
 $tabwidth: 768;
 $mobwidthM: 380;
+$mobwidthL: 425;
 $tabwidthpx: $tabwidth + px;
 $mobwidthMpx: $mobwidthM + px;
+$mobwidthLpx: $mobwidthL + px;
 
 $z-i-burger: 4;
 $z-i-logo: 4;
@@ -11,6 +13,7 @@ $z-i-menu-container: 3;
 $z-i-slider: 1;
 $z-i-enjoy: 2;
 $z-i-enjoy-background: 1;
+$z-i-slider-button: 1;
 
 // Colors
 // Text
