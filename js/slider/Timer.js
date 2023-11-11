@@ -1,8 +1,7 @@
 import { Listener } from "./Listener.js";
 
 export class Timer {
-  static anchor = document.getElementById('timers');
-  static selector = '_progress';
+  static anchor = null;
   constructor() {
     this.element = this.init();
     this.insertElement();
@@ -10,14 +9,14 @@ export class Timer {
   }
   init() {
     const element = document.createElement('div');
-    element.classList.value = 'timer';
+    element.classList.value = 'slider__timer';
     return element;
   }
   insertElement() {
     Timer.anchor.insertAdjacentElement('beforeend', this.element);
   }
   async startAnimation() {
-    await this.listener.start(Timer.selector);
+    await this.listener.start('_progress');
   }
   getResolve() {
     return this.listener.getResolve();

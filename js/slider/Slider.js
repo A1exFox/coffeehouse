@@ -3,21 +3,22 @@ import { Timer } from "./Timer.js";
 
 export class Slider {
   constructor(slidesData, containers) {
-    this.container = containers.slider;
-    // this.items = this.init(slidesData);
-    // this.direction = 'next';
-    // this.insertSlides();
-    // this.startAnimation();
+    this.containers = containers;
+    this.items = this.init(slidesData);
+    this.direction = 'next';
+    this.insertSlides();
+    this.startAnimation();
   }
   init(slidesData) {
-    const items = slidesData.map(selector => [new Slide(selector), new Timer()]);
+    Timer.anchor = this.containers.timer;
+    const items = slidesData.map(slidedata => [new Slide(slidedata), new Timer()]);
     return items;
   }
   insertSlides() {
     this.items.forEach(([slide]) => this.insertSlide('beforeend', slide));
   }
   insertSlide(position, slide) {
-    this.container.insertAdjacentElement(position, slide.element);
+    this.containers.slider.insertAdjacentElement(position, slide.element);
   }
 
   next() {
@@ -55,6 +56,7 @@ export class Slider {
   async startAnimation() {
     const timer = this.getCurrentTimer();
     await timer.startAnimation();
+    // console.log('start');
     if (this.direction == 'next') this.nextslide();
     if (this.direction == 'prev') this.prevslide();
   }

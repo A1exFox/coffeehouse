@@ -23,9 +23,7 @@
     height: 100%;
     margin-left: -100%;
   }
-  &__item {
-    flex: 0 0 100%;
-  }
+  &__item {}
   &__timers {
     display: flex;
     justify-content: center;
@@ -41,8 +39,10 @@
     &::before {
       content: '';
       display: block;
+      left: 0;
+      top: 0;
       height: 100%;
-      width: 50%;
+      width: 0%;
       background-color: $border-dark;
     }
   }
@@ -75,6 +75,8 @@
   }
 }
 .slide {
+  flex: 0 0 100%;
+  overflow: hidden;
   &__body {
     max-width: 480px;
     margin: 0 auto;
@@ -101,5 +103,39 @@
     @extend %heading-3;
     color: $text-dark;
     text-align: center;
+  }
+}
+
+.slide._hide {
+  white-space: nowrap;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-name: hide;
+}
+.slide._show {
+  white-space: nowrap;
+  animation-duration: 0.5s;
+  animation-direction: reverse;
+  animation-name: hide;
+}
+@keyframes hide {
+  from {
+    flex-basis: 100%;
+  }
+  to {
+    flex-basis: 0%;
+  }
+}
+._progress.slider__timer::before {
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-name: progress;
+}
+@keyframes progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
   }
 }

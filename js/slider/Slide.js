@@ -1,14 +1,24 @@
 import { Listener } from "./Listener.js";
 
 export class Slide {
-  constructor(selector) {
-    this.selector = selector;
-    this.element = this.create(selector);
+  constructor(slidedata) {
+    this.data = slidedata;
+    this.element = this.create(slidedata);
     this.listener = new Listener(this.element);
   }
-  create(selector) {
+  create(data) {
     const element = document.createElement('div');
-    element.classList.value = `slide ${selector}`;
+    element.classList.value = `slider__item slide`;
+    const html = `
+    <div class="slide__body">
+      <div class="slide__image-container">
+        <img class="slide__image" src="${data.img}" alt="coffee">
+      </div>
+      <h3 class="slide__name">${data.name}</h3>
+      <p class="slide__description">${data.description}</p>
+      <div class="slide__price">${data.price}</div>
+    </div>`;
+    element.insertAdjacentHTML('afterbegin', html);
     return element;
   }
   async transitionNext() {
