@@ -1,5 +1,6 @@
 import * as menu from "./menu.js";
 import * as slider from "./slider.js";
+import * as swiper from "./swiper.js";
 
 const header = document.querySelector('.header');
 
@@ -26,3 +27,9 @@ const sliderset = {
 slider.init(sliderset);
 prevslide.onclick = slider.previous;
 nextslide.onclick = slider.next;
+
+/* Swiper */
+const sliderframe = document.getElementById('sliderframe');
+swiper.init(sliderframe);
+swiper.action.left = slider.previous;
+swiper.action.right = slider.next;
