@@ -1054,7 +1054,7 @@ body {
   }
 }
 ._progress.slider__timer::before {
-  animation-duration: 6s;
+  animation-duration: 5s;
   animation-timing-function: linear;
   animation-name: progress;
 }
@@ -1066,4 +1066,7 @@ body {
   to {
     width: 100%;
   }
+}
+.slider__frame:hover ~ .slider__timers > ._progress.slider__timer::before {
+  animation-play-state: paused;
 }/*# sourceMappingURL=style.css.map */

@@ -5,7 +5,6 @@ export async function init(set) {
     const sliderData = await loaddata(set.dataurl);
     if (!sliderData) throw new Error(`Load from '${url}' is failed`);
     slider = new Slider(sliderData, set.containers);
-    // slider = sliderData;
   }
   catch (error) {
     console.error(error);
@@ -17,8 +16,8 @@ async function loaddata(url) {
   return json;
 }
 export function previous() {
-  if (slider) console.log('previous');
+  if (slider) slider.prev();
 }
 export function next() {
-  if (slider) console.log('next');
+  if (slider) slider.next();
 }

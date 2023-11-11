@@ -105,7 +105,6 @@
     text-align: center;
   }
 }
-
 .slide._hide {
   white-space: nowrap;
   animation-duration: 0.5s;
@@ -127,7 +126,7 @@
   }
 }
 ._progress.slider__timer::before {
-  animation-duration: 6s;
+  animation-duration: 5s;
   animation-timing-function: linear;
   animation-name: progress;
 }
@@ -138,4 +137,7 @@
   to {
     width: 100%;
   }
+}
+.slider__frame:hover~.slider__timers>._progress.slider__timer::before {
+  animation-play-state: paused;
 }

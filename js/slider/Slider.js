@@ -56,7 +56,6 @@ export class Slider {
   async startAnimation() {
     const timer = this.getCurrentTimer();
     await timer.startAnimation();
-    // console.log('start');
     if (this.direction == 'next') this.nextslide();
     if (this.direction == 'prev') this.prevslide();
   }
