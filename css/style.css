@@ -927,7 +927,7 @@ body {
 .slider__frame {
   position: relative;
   z-index: 1;
-  max-width: 600px;
+  max-width: 560px;
   margin: 0 auto;
   overflow: hidden;
 }

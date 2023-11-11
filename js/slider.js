@@ -1,12 +1,10 @@
 let slider = null;
-export async function sliderinit(set) {
+export async function init(set) {
   try {
     const sliderData = await loaddata(set.dataurl);
     if (!sliderData) throw new Error(`Load from '${url}' is failed`);
     // slider = new Slider(sliderData, sliderContainer);
     slider = sliderData;
-    set.action.previous.onclick = clickprevious;
-    set.action.next.onclick = clicknext;
   }
   catch (error) {
     console.error(error);
@@ -17,9 +15,9 @@ async function loaddata(url) {
   const json = await response.json();
   return json;
 }
-function clickprevious() {
+export function previous() {
   if (slider) console.log('previous');
 }
-function clicknext() {
+export function next() {
   if (slider) console.log('next');
 }
